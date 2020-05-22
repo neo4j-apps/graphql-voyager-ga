@@ -1,5 +1,6 @@
 {
   "name": "@neo4j-apps/graphql-voyager-ga",
+  "author": "Andreas Kollegger  <andreas.kollegger@neo4j.com> (http://neo4j.com)",
   "homepage": ".",
   "main": "dist/index.html",
   "version": "0.0.2",
