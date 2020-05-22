@@ -2,7 +2,7 @@
   "name": "@neo4j-apps/graphql-voyager-ga",
   "homepage": ".",
   "main": "dist/index.html",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "repository": {
     "type": "git",
