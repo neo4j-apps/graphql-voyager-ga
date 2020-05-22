@@ -30,4 +30,8 @@ Test the build by dragging and dropping the `.tgz` onto Neo4j Desktop.
 
 Publish:
 
+- `npm run release`
+
+Deploy:
+
 - `npm run deploy`
