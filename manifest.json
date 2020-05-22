@@ -1,6 +1,7 @@
 {
   "short_name": "GraphQL Voyager",
   "name": "GraphQL Voyager Graph App",
+  "description": "GraphQL Voyager integrated with Neo4j Desktop",
   "icons": [
     {
       "src": "favicon.png",
