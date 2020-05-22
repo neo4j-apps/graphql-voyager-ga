@@ -1,7 +1,17 @@
 {
-  "name": "graphql-voyager-ga",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@neo4j-apps/graphql-voyager-ga",
+  "homepage": ".",
+  "main": "dist/index.html",
+  "version": "0.0.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo4j-apps/graphql-voyager-ga.git"
+  },
+  "license": "Apache-2.0",
+  "neo4jDesktop": {
+    "apiVersion": "^1.4.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -10,6 +20,8 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "graphql": "^15.0.0",
+    "graphql-voyager": "^1.0.0-rc.30",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -17,9 +29,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build && mv build dist",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "rm -rf dist && npm run build",
+    "deploy": "gh-pages -d dist",
+    "release": "np --no-tests"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "np": "^6.2.3"
+  },
+  "np": {
+    "yarn": false,
+    "releaseDraft": true
   }
 }
